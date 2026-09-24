@@ -84,7 +84,7 @@
             // 
             this.computeBtn.BackColor = System.Drawing.Color.Crimson;
             this.computeBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.computeBtn.Location = new System.Drawing.Point(415, 90);
+            this.computeBtn.Location = new System.Drawing.Point(415, 91);
             this.computeBtn.Name = "computeBtn";
             this.computeBtn.Size = new System.Drawing.Size(98, 26);
             this.computeBtn.TabIndex = 4;
