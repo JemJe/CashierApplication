@@ -43,7 +43,7 @@ namespace CashierApplication
 
                 item = new DiscountedItem(itemName, itemPriceText, itemQuantityText, itemDiscountText);
 
-                TotalAmountLabel.Text = item.getTotalPrice().ToString();
+                TotalAmountLabel.Text = item.getTotalPrice().ToString("0.00");
             }
             catch(FormatException)
             {
@@ -66,7 +66,7 @@ namespace CashierApplication
                         return;
                     }
 
-                    changeLabel.Text = item.getChange().ToString();
+                    changeLabel.Text = item.getChange().ToString("0.00");
                 }
                 else
                 {
@@ -77,6 +77,31 @@ namespace CashierApplication
             {
                 MessageBox.Show("[!] Please enter a valid payment amount.");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            itemBox.Clear();
+            priceBox.Clear();
+            quantityBox.Clear();
+            discountBox.Clear();
+            paymentBox.Clear();
+
+            TotalAmountLabel.Text = "";
+            changeLabel.Text = "";
+
+            item = null;
+        }
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLoginAccount loginForm = new frmLoginAccount();
+            loginForm.Show();
+        }
+
+        private void exitApplicationToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
